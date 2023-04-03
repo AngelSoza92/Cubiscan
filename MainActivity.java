@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
                 String ancho = textAncho.getText().toString().trim();
                 String alto = textAlto.getText().toString().trim();
                 String zku = skuActual;
-                noMeToquenLosHuevos(zku, peso, largo, ancho, alto);
+                enviarAPI(zku, peso, largo, ancho, alto);
             }
         });
 
@@ -361,7 +361,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void noMeToquenLosHuevos(String sku, String peso, String largo, String ancho, String alto) {
+    public void enviarAPI(String sku, String peso, String largo, String ancho, String alto) {
         try {
             int zku = Integer.parseInt(sku);
             if (!(textPeso.getText().toString().replace(" ", "").equals(""))) {
